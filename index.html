@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TechFinder - Find your style</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- icon -->
+    <link rel="stylesheet" href="fontawesome-free-5.11.2-web/css/all.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-storage.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDH6Il39CyrLGcuMyAv59SCGgeMGU06Qb0",
+            authDomain: "techfinder-e462e.firebaseapp.com",
+            databaseURL: "https://techfinder-e462e.firebaseio.com",
+            projectId: "techfinder-e462e",
+            storageBucket: "techfinder-e462e.appspot.com",
+            messagingSenderId: "106708209466",
+            appId: "1:106708209466:web:95fe6fd55db587d3a5ca03"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+</head>
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up "></i></button>
+    <div class="pt50" id="app">
+       
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/controller.js"></script>
+    <script src="./js/component.js"></script>
+    <script src="./js/view.js"></script>
+    <script src="js/css.js"></script>
+    <script src="js/model.js"></script>
+</body>
+
+<footer class="section bg-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="">
+                    <h6 class="footer-heading text-uppercase text-white">Information</h6>
+                    <ul class="list-unstyled footer-link mt-4">
+                        <li><a href="">Pages</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Products</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="">
+                    <h6 class="footer-heading text-uppercase text-white">Address</h6>
+                    <ul class="list-unstyled footer-link mt-4 fwn">
+                        <li><a href="">28 Le Thanh Nghi-HBT-HN-VN </a></li>
+                        <li><a href="">40 Bach Mai-HBT-HN-VN</a></li>
+                        <li><a href="">50 Nguyen Phong Sac-CG-HN</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="">
+                    <h6 class="footer-heading text-uppercase text-white">Product</h6>
+                    <ul class="list-unstyled footer-link mt-4">
+                        <li><a href="">Iphone </a></li>
+                        <li><a href="">Ipad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="">
+                    <h6 class="footer-heading text-uppercase text-white">Contact Us</h6>
+                    <p class="contact-info mt-4 cc" style="font-weight: bold;">Email : Hathutra00@gmail.com</p>
+                    <p class="contact-info cc" style="font-weight: bold;">0377522424</p>
+                    <div class="mt-5">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#"><i
+                                        class="fab facebook footer-social-icon fa-facebook-f"></i></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i
+                                        class="fab twitter footer-social-icon fa-twitter"></i></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i
+                                        class="fab google footer-social-icon fa-google"></i></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i
+                                        class="fab apple footer-social-icon fa-apple"></i></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <p class="footer-alt mb-0 f-14">2019 © Anup, All Rights Reserved</p>
+    </div>
+</footer>
+
+</html>

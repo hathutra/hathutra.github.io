@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // register, login, list
+        window.onload = init
+
+        function init() {
+            // view.showScreen('register')
+            view.showLastLocation('register') // dua nguoi dung den trang cuoi cung, neu ko co trang cuoi cung >> show register
+        }
+        
+        const view = {
+            lastScreen: null,
+            showScreen(screenName) {
+                let app = document.querySelector('#app')
+                view.saveLastLocation(screenName)
+
+                switch(screenName) {
+                    case 'register': {
+                        app.innerHTML = 'Register'
+                        break
+                    }
+                    case 'login': {
+                        app.innerHTML = 'Login'
+                        break
+                    }
+                    case 'list': {
+                        app.innerHTML = 'List'
+                        break
+                    }
+                }
+            },
+            saveLastLocation(screenName) {
+                view.lastScreen = screenName
+                window.location.hash = `#${screenName}`
+            },
+            showLastLocation(rollbackScreenName) {
+                let lastLocation = view.getLastLocation()
+                if(lastLocation) {
+                    view.showScreen(lastLocation)
+                } else {
+                    view.showScreen(rollbackScreenName)
+                }
+            },
+            getLastLocation() {
+                let hash = window.location.hash
+                let screenNames = ['register', 'login', 'list']
+                if(hash && hash.length && hash.startsWith('#')) {
+                    let lastLocation = hash.substring(1)
+                    if(screenNames.includes(lastLocation)) {
+                        return lastLocation
+                    }
+                }
+                return null
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <button onclick="view.showScreen('register')">
+        regsiter
+    </button>
+    <button onclick="view.showScreen('login')">
+        login
+    </button>
+    <button onclick="view.showScreen('list')">
+        list
+    </button> -->
+    <div id="app"></div>
+
+</body>
+
+</html>
+
+view.saveLastLocation = function(screenName) {
+    view.lastScreen = screenName
+    window.location.hash = `#${screenName}`
+  }
+  
+  view.showLastLocation= function(rollbackScreenName) {
+    let lastLocation = view.getLastLocation()
+    if(lastLocation) {
+        view.showComponents(lastLocation)
+    } else {
+        view.showComponents(rollbackScreenName)
+    }
+  }
+  
+  view.getLastLocation=function() {
+    let hash = window.location.hash
+    let screenNames = ['register', 'login', 'home','companyDetail','alljob']
+    if(hash && hash.length && hash.startsWith('#')) {
+        let lastLocation = hash.substring(1)
+        if(screenNames.includes(lastLocation)) {
+            return lastLocation
+        }
+    }
+    return null
+  }
