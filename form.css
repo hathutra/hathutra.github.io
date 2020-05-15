@@ -3,12 +3,11 @@
 {
 	padding:15px 15px;
 	margin-top:15px;	
-	color:#fff;
+  color:#000000;
+  background-color: rgb(153, 171, 202);
 }
 body
 {
-  background-color: #000000;
-  background-image: url(./images/nasa-Q1p7bh3SHj8-unsplash.jpg);
 	background-size: cover;
 	background-repeat:no-repeat;
 
