@@ -137,7 +137,7 @@ component.profile = `
             <span class="fw500 fs24"><i class="far fa-heart" style="font-size:30px; width:40px"></i>Saved
                 jobs</span>
         </div>
-        <div class="job row" id = "list-of-saved-jobs" >
+        <div class="job row" id = "all-job-saved" >
         </div>
     </div>
 
@@ -295,7 +295,7 @@ component.register = `
 </form>
 `
 
-component.header=`<div class="bg" >
+component.header = `<div class="bg" >
  <div class="content1">
    <div class="title">
      <h3> TECHFINDER</h1>
@@ -330,8 +330,8 @@ component.header=`<div class="bg" >
  </div>
  </div>
  </div>`
-component.home = 
-` 
+component.home =
+    ` 
 <div class="  text-job container ">
 <h2> Nhà Tuyển Dụng </h2>
 </div>
@@ -364,7 +364,7 @@ component.companydetail = `
 </div>
 </div> `
 
-component.alljob=`
+component.alljob = `
 <div class="  text-job container ">
         <h2> Chọn Công Việc </h2>
     </div>

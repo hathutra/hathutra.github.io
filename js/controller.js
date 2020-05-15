@@ -246,6 +246,21 @@ let updateAvatar = async function (link) {
     });
 }
 
+// delete job
+async function deleteJob(id, email) {
+  // let company = await firebase.firestore().collection('company').doc(id).delete()
+  let currentUser = firebase.auth().currentUser;
+  await firebase
+    .firestore()
+    .collection('job')
+    .doc(id)
+    .update({
+      userSaved: firebase.firestore.FieldValue.arrayRemove(email)
+    })
+  console.log("Delete saved job ok")
+  model.jobs = model.jobs.filter(function (v, i, arr) { return v.id != id; })
+  controller.displaySavedJobs();
+}
 
 // handle saved jobs
 controller.displaySavedJobs = async function () {
@@ -254,6 +269,7 @@ controller.displaySavedJobs = async function () {
 
   // doc.data() is never undefined for query doc snapshots
   let jobs = model.jobs
+  document.getElementById("all-job-saved").innerHTML = ""
   for (let job of jobs) {
     for (let email of job.userSaved) {
       if (email == currentUser.email) {
@@ -287,25 +303,15 @@ controller.displaySavedJobs = async function () {
                           <span class="fs18 skill id="job-skill"">${jobSkill}</span>
                       </div>
                       
-                      <button style="padding: 0 10px 0 10px; border-radius: 5px" class="fs18 save" id="job-delete">Delete Job</button>
+                      <button onclick="deleteJob('${job.id}','${email}')" style="padding: 0 10px 0 10px; border-radius: 5px" class="fs18 save" id="job-delete">Delete Job</button>
 
                   </div>
                 </div>
             `
-        let userSavedJobs = document.getElementById("list-of-saved-jobs")
+        let userSavedJobs = document.getElementById("all-job-saved")
         view.appendHtml(userSavedJobs, jobCard)
       }
     }
-  }
-
-
-
-
-  // delete job
-  let jobDelete = document.getElementById('job-delete')
-  console.log(jobDelete)
-  jobDelete.onclick = function () {
-
   }
 }
 
@@ -420,6 +426,7 @@ controller.loadJob = async function () {
 
   controller.loadedJob = true
 }
+
 controller.saveJob = async function (id, email) {
   await firebase
     .firestore()
