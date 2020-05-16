@@ -40,8 +40,11 @@ controller.logIn = async function (logInInfo) {
     if (!result.user.emailVerified) {
       throw new Error('You must verify email!')
     }
-    console.log(view.pastScreen);
-    view.showComponents(view.pastScreen)
+   if(view.pastScreen){
+     view.showComponents(view.pastScreen)
+   }else{
+     view.showComponents('home')
+    }
 
   } catch (err) {
     view.setText('log-in-error', err.message)
