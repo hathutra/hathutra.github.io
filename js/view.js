@@ -575,6 +575,12 @@ view.showJobDetail = function () {
                           ${job.why}
                           </p>
                       </div>
+                      <div class="pl20">
+                      <p style="font-weight: 500;font-size: 23px;">Send at Your CV</p>
+                      <p>
+                      ${company.emailCompany}
+                      </p>
+                  </div>
                       <!-- Button trigger modal -->
                           <div class="btn-apply">
                               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">APPLY NOW</button>
