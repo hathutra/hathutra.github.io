@@ -40,8 +40,11 @@ controller.logIn = async function (logInInfo) {
     if (!result.user.emailVerified) {
       throw new Error('You must verify email!')
     }
-    console.log(view.pastScreen);
-    view.showComponents(view.pastScreen)
+    if (view.pastScreen) {
+      view.showComponents(view.pastScreen)
+    } else {
+      view.showComponents('home')
+    }
 
   } catch (err) {
     view.setText('log-in-error', err.message)
@@ -469,8 +472,8 @@ controller.inputSearch = async function (search) {
   for (let job of jobs) {
     let address = job.address.toLowerCase().includes(b)
     let name = job.nameCompany.toLowerCase().includes(a)
-    let skill=job.skill.toLowerCase().includes(a)
-    if (name && address|| skill&&address) {
+    let skill = job.skill.toLowerCase().includes(a)
+    if (name && address || skill && address) {
       selecjob.push(job)
     }
   }
