@@ -716,9 +716,13 @@ view.ShowNav = function () {
   btnSignOut.onclick = function () {
     firebase.auth().signOut()
   }
-
 }
 view.nextLink = function () {
+
+  if (view.currentScreen == 'home' || view.currentScreen == 'alljob') {
+    let bgChange = document.getElementById(`${view.currentScreen}`)
+    bgChange.style.color = "#2F76CA"
+  }
 
   let link = document.getElementById("next-login")
   link.onclick = loginLinkClick

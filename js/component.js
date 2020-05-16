@@ -147,11 +147,11 @@ component.navTransf = `
 <nav id="nav" class="navbar navbar-expand-sm fixed-top">
       <a id="logo" href="index.html" ><img src="imgs/img/logo.png" alt=""></a>
       <ul id="1" class="navbar-nav justify-content-end">
-        <li class="nav-item">
+        <li id="home" class="nav-item">
           <span  class="nav-link clw" id="link-home">HOME</span>
         </li>
-        <li class="nav-item">
-          <span  class="nav-link clw "  id="link-job">ALL JOB</span>
+        <li id="alljob" class="nav-item">
+          <span  class="nav-link clw"  id="link-job">ALL JOB</span>
         </li>
         <li class="nav-item">
           <a href="formpage.html"><span class="nav-link clw"  id="link-company" >CONTACT US</span></a>
