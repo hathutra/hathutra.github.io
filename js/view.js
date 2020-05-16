@@ -300,12 +300,12 @@ view.showCompany = function () {
   <div class="card rounded  ">
     <img src="${logo}" class="card-img" alt="...">
     <div class="pd10">
-      <p  style="text-align: center;">${company.name}</p>
+      <p  style="text-align: center; font-size:18px" class="namecompany-hover">${company.name}</p>
     </div>
     <div class="p-2 d-flex justify-content-between">
 
-      <p style="color:  #A50B0B; font-size: 12px;">10 công việc </p>
-      <a   onclick=linkCompanyDetail('${nameId}')  style=" color:#013B80;font-size: 12px;"> xem thêm >> </a>
+      <p style="color:  #A50B0B; font-size: 13px;">10 công việc </p>
+      <a   onclick=linkCompanyDetail('${nameId}')  style=" color:#013B80;font-size: 13px;"> xem thêm >> </a>
     </div>
   </div>
 </div>`
@@ -705,7 +705,7 @@ view.ShowNav = function () {
   view.clearHtml("dropdown")
 
   link.innerHTML = component.dropdown
-  view.setText('text-login', currentUser.displayName)
+  view.setText('text-login', "ACC")
 
   let profile = document.getElementById("btn-profile")
   profile.onclick = function () {
@@ -716,9 +716,13 @@ view.ShowNav = function () {
   btnSignOut.onclick = function () {
     firebase.auth().signOut()
   }
-
 }
 view.nextLink = function () {
+
+  if (view.currentScreen == 'home' || view.currentScreen == 'alljob') {
+    let bgChange = document.getElementById(`${view.currentScreen}`)
+    bgChange.style.color = "#2F76CA"
+  }
 
   let link = document.getElementById("next-login")
   link.onclick = loginLinkClick

@@ -1,0 +1,30 @@
+
+#form_container
+{
+	padding:15px 15px;
+	margin-top:15px;	
+  color:#000000;
+  background-color: rgb(153, 171, 202);
+}
+body
+{
+	background-size: cover;
+	background-repeat:no-repeat;
+
+}
+.upload-btn-wrapper 
+{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file] 
+{
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+

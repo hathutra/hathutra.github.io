@@ -53,7 +53,7 @@ nav>a>img{
 }
 .about-company{
     padding: 0px;
-    padding-top: 100px;
+    padding-top: 30px;
 }
 .detail{
     justify-content: center
@@ -129,13 +129,15 @@ nav>a>img{
     background-color: #A50B0B;
     color: #ffffff;
     padding: 0 10px 0 10px;
-    border-radius: 5px
+    border-radius: 5px;
+    height:30px;
 }
 .saved{
     background-color: #2F76CA;
     color: #ffffff;
     padding: 0 10px 0 10px;
-    border-radius: 5px
+    border-radius: 5px;
+    height:30px;
 }
 /*footer */
 .bg-footer {
@@ -381,15 +383,17 @@ color: #FFFFFF;
     color: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
-    font-weight: bold;
     font-size: 18px;
     line-height: 21px;
     width: 150px;
     height: 40px;
     background: #013B80;
     opacity: 0.8;
-    border-radius: 99px;
+    border-radius: 20px;
 }
+.filter-btn:hover{
+    background-color: #2F76CA !important;
+    }
 .filter-result>div{
     margin-bottom: 8px;
     background: #ffffff;
@@ -658,7 +662,6 @@ color: #515151;
     width: 198px;
     height: 50px;
     border-radius: 5px;
-    font-weight: 500;
     font-size: 20px;
     line-height: 23px;
   }
@@ -691,7 +694,7 @@ color: #FFFFFF;
       background-repeat: no-repeat;
      background-size: cover;
      width: 100%;
-     height: 550px;
+     height: 600px;
    }
    .title{
       
@@ -723,7 +726,6 @@ color: #FFFFFF;
     color: #FFFFFF;
 }
 .title>h5{
-    font-family: Open Sans;
     font-style: normal;
     font-weight: 600px !important;
     font-size: 24px;
@@ -791,4 +793,22 @@ a{
   background-color: #555;
   opacity: 1;
 }
-
+/*final*/
+.navbar span:hover{
+    color:#2F76CA !important;
+}
+.navbar a:hover{
+    color:#2F76CA !important;
+}
+.btn-hover:hover{
+    background-color: #2F76CA;
+}
+.namecompany-hover:hover{
+    color:#2F76CA
+}
+.btn-submit-profile:hover{
+    background-color: #2F76CA;
+}
+.navbar a{
+    text-decoration: none;
+    }

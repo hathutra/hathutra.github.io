@@ -122,10 +122,10 @@ component.profile = `
         <div>
             <form class="d" id = "cv-form-upload">
             <div>
-                <input type="file" class="ip-cv" name="fileChooser">
+                <input type="file" class="ip-cv" style="font-size:15px" name="fileChooser">
             </div>
-            <div>
-                <button type="submit" class="btn-submit" id="cv-submit" >Submit</button>
+            <div style="padding-top:20px">
+                <button type="submit" class="btn-submit-profile" id="cv-submit" >Submit</button>
             </div>
             </form>
         </div>
@@ -137,7 +137,7 @@ component.profile = `
             <span class="fw500 fs24"><i class="far fa-heart" style="font-size:30px; width:40px"></i>Saved
                 jobs</span>
         </div>
-        <div class="job row" id = "list-of-saved-jobs" >
+        <div class="job row" id = "all-job-saved" >
         </div>
     </div>
 
@@ -145,16 +145,16 @@ component.profile = `
 `
 component.navTransf = `
 <nav id="nav" class="navbar navbar-expand-sm fixed-top">
-      <a id="logo" ><img src="imgs/img/logo.png" alt=""></a>
+      <a id="logo" href="index.html" ><img src="imgs/img/logo.png" alt=""></a>
       <ul id="1" class="navbar-nav justify-content-end">
-        <li class="nav-item">
+        <li id="home" class="nav-item">
           <span  class="nav-link clw" id="link-home">HOME</span>
         </li>
-        <li class="nav-item">
-          <span class="nav-link clw"  id="link-company" >ALL COMPANY</span>
+        <li id="alljob" class="nav-item">
+          <span  class="nav-link clw"  id="link-job">ALL JOB</span>
         </li>
         <li class="nav-item">
-          <span  class="nav-link clw "  id="link-job">ALL JOB</span>
+          <a href="formpage.html"><span class="nav-link clw"  id="link-company" >CONTACT US</span></a>
         </li>
         <div id="dropdown">
     <div class="dropdown" style="width: 50px; height: 30px;margin: 0px 30px 0px 50px; text-align: center">
@@ -168,16 +168,16 @@ component.navTransf = `
 `
 
 component.navNoTransf = `  <nav id="nav-b" class="navbar navbar-expand-sm fixed-top">
-<a id="logo" ><img src="imgs/img/logotrang.png" alt=""></a>
+<a id="logo" href="index.html" ><img src="imgs/img/logotrang.png" alt=""></a>
 <ul id="1" class="navbar-nav justify-content-end">
     <li class="nav-item">
         <a class="nav-link" id="link-home"  >HOME</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link"  id="link-company">ALL COMPANY</a>
+        <a class="nav-link "  id="link-job">ALL JOB</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link "  id="link-job">ALL JOB</a>
+         <a href="formpage.html"><span class="nav-link clw"  id="link-company" >CONTACT US</span></a>
     </li>
     <div id="dropdown">
     <div class="dropdown" style="width: 50px; height: 30px;margin: 0px 30px 0px 50px; text-align: center">
@@ -295,43 +295,45 @@ component.register = `
 </form>
 `
 
-component.header=`<div class="bg" >
+component.header = `<div class="bg" >
  <div class="content1">
    <div class="title">
      <h3> TECHFINDER</h1>
-       <h5> WEBSTE TÌM VIỆC HÀNG ĐẦU CHO DEVELOPER</h4>
+       <h5> THE LEADING WEBSITE FOR IT JOBFINDINGS</h4>
    </div>
  
    <form  id="form-search" class=" d-flex justify-content-center form-search">
      <span class=""
-       style=" border-radius: 5px 0px 0px 5px;  background-color: white; height: 50px; width: 30px;"><i
-         style="padding-top:65%;" class="fa fa-search"></i></span>
-     <input class="ip" name="search" type="search" style="font-size: 20px;" placeholder="Search company" aria-label="Search" required>
+       style=" border-radius: 5px 0px 0px 5px;  background-color: white; height: 50px; width: 30px;color: #8D8D8D;font-size: 18px"><i
+         style="padding-top:60%; font-size:20px; color:#C4C4C4" class="fa fa-search"></i></span>
+     <input class="ip" name="search" type="search" style="font-size: 18px;" placeholder="Company,skill..." aria-label="Search" required>
      <div id="text-error" class="message-error"></div>
      <div class="form-group ">
  
- 
+    
        <select id="option-address" name="address" class="form-control form-control1 form-search ">
+     
          
        </select>
      </div>
  
-     <button class=" btnBg  form-search " type="submit"> <i class="fas fa-search  "></i> Search</button>
+     <button class=" btnBg  form-search btn-hover" type="submit" style="font-size:20px"> <i class="fas fa-search " style="font-size:20px"></i> Search</button>
  
    </form>
  
    <div class="pt60 tk">
    
    </div>
- 
-   <div id="job-skill" class="d-flex justify-content-center mt-5">
+   
+   <div  class="d-flex justify-content-center " style="font-size:20px; color:#ffffff"> Job by skill</div>
+   <div id="job-skill" class="d-flex justify-content-center mt-5 ">
      
    </div>
  </div>
  </div>
  </div>`
-component.home = 
-` 
+component.home =
+    ` 
 <div class="  text-job container ">
 <h2> Nhà Tuyển Dụng </h2>
 </div>
@@ -364,36 +366,36 @@ component.companydetail = `
 </div>
 </div> `
 
-component.alljob=`
+component.alljob = `
 <div class="  text-job container ">
-        <h2> Chọn Công Việc </h2>
+        <h2> JOBS </h2>
     </div>
     <div class="filter container">
         <div style="display: flex; justify-content: center; padding-top: 46px" class="row">
             <div style="padding: 0px" class="filter-main col-sm-3">
                 <div style="max-width: 100%; padding: 15px 35px 10px 50px ; border-bottom: 2px solid #013B80">
-                    <span style="font-weight: bold; font-size: 25px">BỘ LỌC</span>
+                    <span style="font-size: 25px">Filter</span>
                 </div>
 
                 <div style="padding: 15px 35px 10px 50px">
-                    <div id="option-checkbox" style="border-bottom: 1px solid #000000; padding: 10px ">
+                    <div id="option-checkbox" style="border-bottom: 1px solid #cccccc; padding: 10px ">
                         <div style="padding-bottom: 10px">
-                            <span style="font-size: 20px">Vị trí</span>
+                            <span style="font-size: 20px">City</span>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input id="all" type="checkbox" class="form-check-input">Tất cả
+                                <input id="all" type="checkbox" class="form-check-input">All
                             </label>
                         </div>
                         
                     </div>
-                    <div style="border-bottom: 1px solid #000000; padding: 10px ">
+                    <div style=" padding: 10px ">
                         <div style="padding-bottom: 10px">
-                            <span style="font-size: 20px">Mức Lương</span>
+                            <span style="font-size: 20px">Salary</span>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input id="all1" type="checkbox" class="form-check-input">Tất cả
+                                <input id="all1" type="checkbox" class="form-check-input">All
                             </label>
                         </div>
                         <div class="form-check">
@@ -416,7 +418,7 @@ component.alljob=`
                 </div>
 
                 <div style="display: flex; justify-content: center; padding: 60px">
-                    <button onclick="controller.checkbox()" class="filter-btn">Áp dụng</button>
+                    <button onclick="controller.checkbox()" class="filter-btn">Search</button>
                 </div>
             </div>
             <div id="all-job" style="padding: 0px" class="filter-result col-sm-8">
