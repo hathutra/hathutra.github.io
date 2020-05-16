@@ -14,11 +14,11 @@ model.saveJob = function (jobs) {
 }
 model.saveId = function (companyId) {
   model.companyId = companyId
-  
-  
+
+
 }
 model.saveCurrentJobs = function (currentJobs) {
   model.currentJobs = currentJobs
 }
- 
+
 

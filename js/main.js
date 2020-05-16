@@ -5,7 +5,7 @@ function init() {
 
   firebase.auth().onAuthStateChanged(function (user) {
     if (view.currentScreen == 'register' || view.currentScreen == 'login') {
-    
+
       return
     }
     if (user && user.emailVerified) {
